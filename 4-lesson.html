@@ -34,6 +34,11 @@
     <div id="messageBox">
         Text test
     </div>
+
+    <ol id="students-list">
+
+    </ol>
+
 <script>
     //parseInt and parseFloat 
 
@@ -58,7 +63,7 @@
     //     myTitle.style.color = 'red';
     // }, 3000);
 
-    
+
 
     function calc() {
         var a = document.getElementById('aValue').value;
@@ -79,6 +84,24 @@
         setTimeout(function () {
             box.style.display = 'none';
         }, 4000);
+    }
+
+    // HOMEWORK
+
+    var students = [
+        {name: 'Murod', age: 23},
+        {name: 'Bobur', age: 21},
+        {name: 'Doston', age: 20},
+        {name: 'Shohrux', age: 22},
+    ];
+
+    var list_content = document.getElementById('students-list');
+
+    for (var i = 0; i < students.length; i++) {
+        var full = students[i].name+'('+students[i].age+')';
+        var li = document.createElement('li');
+        li.innerText = full;
+        list_content.append(li);
     }
 
 </script>
